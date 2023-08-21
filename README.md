@@ -1,6 +1,6 @@
 # Azure Devops Depscan
 
-NuGetOutdatedScanner is a command-line interface (CLI) tool built with .NET Core, designed to search for outdated NuGet packages within an Azure DevOps environment. By utilizing Azure DevOps search APIs, it allows you to efficiently scan without downloading the entire codebase.
+Azure Devops Depscan is a command-line interface (CLI) tool built with .NET Core, designed to search for outdated NuGet packages within an Azure DevOps environment. By utilizing Azure DevOps search APIs, it allows you to efficiently scan without downloading the entire codebase.
 
 ## Features
 
