@@ -38,7 +38,7 @@ Use the following command to search for outdated NuGet packages:
 
 ```bash
 depscan-cli-netcore 
-  --user you@pottencial.com.br (required)
+  --user your_email (required)
   --accesstoken your_azure_devops_personal_access_token (required)
   --organization your_org_name (required)
   --feed your_feed_name (optional)
@@ -46,7 +46,7 @@ depscan-cli-netcore
 
 ```bash
 depscan-cli-netcore 
-  --user you@pottencial.com.br 
+  --user your_email
   --accesstoken your_azure_devops_personal_access_token 
   --organization your_org_name 
   --feed your_feed_name (optional)
