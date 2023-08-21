@@ -1,0 +1,138 @@
+{
+  "format": 1,
+  "restore": {
+    "S:\\repos\\github\\azuredevops-depscan\\src\\depscan.cli.netcore\\depscan.cli.netcore.csproj": {}
+  },
+  "projects": {
+    "S:\\repos\\github\\azuredevops-depscan\\src\\depscan.cli.netcore\\depscan.cli.netcore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "S:\\repos\\github\\azuredevops-depscan\\src\\depscan.cli.netcore\\depscan.cli.netcore.csproj",
+        "projectName": "depscan.cli.netcore",
+        "projectPath": "S:\\repos\\github\\azuredevops-depscan\\src\\depscan.cli.netcore\\depscan.cli.netcore.csproj",
+        "packagesPath": "C:\\Users\\renat\\.nuget\\packages\\",
+        "outputPath": "S:\\repos\\github\\azuredevops-depscan\\src\\depscan.cli.netcore\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\renat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "S:\\repos\\github\\azuredevops-depscan\\src\\depscan\\depscan.csproj": {
+                "projectPath": "S:\\repos\\github\\azuredevops-depscan\\src\\depscan\\depscan.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "System.CommandLine": {
+              "target": "Package",
+              "version": "[2.0.0-beta2.21617.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "S:\\repos\\github\\azuredevops-depscan\\src\\depscan\\depscan.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "S:\\repos\\github\\azuredevops-depscan\\src\\depscan\\depscan.csproj",
+        "projectName": "depscan",
+        "projectPath": "S:\\repos\\github\\azuredevops-depscan\\src\\depscan\\depscan.csproj",
+        "packagesPath": "C:\\Users\\renat\\.nuget\\packages\\",
+        "outputPath": "S:\\repos\\github\\azuredevops-depscan\\src\\depscan\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\renat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Refit": {
+              "target": "Package",
+              "version": "[6.3.2, )"
+            },
+            "System.CommandLine": {
+              "target": "Package",
+              "version": "[2.0.0-beta2.21617.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+﻿@model depscan.api.ViewModels.ExploreViewModel
+
+@{
+    ViewBag.Title = "Dependency Scan - Explore";
+    Layout = "_Layout";
+}
+
+@section Scripts {
+<script src="~/app/index.js"></script>
+}
+
+<div class="row mb-3">
+    <div class="col-md-3">
+        <div class="my-3 p-3 bg-body rounded shadow-sm">
+            <form asp-controller="Explore" asp-action="Index" method="post">
+                <div class="mb-3">
+                    <label asp-for="Request.User" class="form-label">Email address</label>
+                    <input asp-for="Request.User" type="email" class="form-control" placeholder="you@email.com.br">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Request.AccessToken" class="form-label">Access Token</label>
+                    <input asp-for="Request.AccessToken" type="password" value="@Model.Request.AccessToken" class="form-control">
+                    <a href="https://dev.azure.com/orgname/_usersSettings/tokens">
+                        Get the access token here
+                    </a>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Request.Project" class="form-label">Project name</label>
+                    <input asp-for="Request.Project" type="text" class="form-control" placeholder="Tribo_Riscos">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Request.Repo" class="form-label">Repository name</label>
+                    <input asp-for="Request.Repo" type="text" class="form-control" placeholder="Pottencial.Reinsurance.Api">
+                </div>
+                <button type="submit" class="btn btn-primary">Scan</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-6">
+        @if (Model.Summary.Count > 0)
+        {
+            @foreach (var package in Model.Summary)
+            {
+                <div class="my-3 p-3 bg-body rounded shadow-sm">
+                    <h6 class="border-bottom pb-2 mb-0">
+                        <svg class="flex-shrink-0 me-2 rounded"
+                             width="32"
+                             height="32"
+                             xmlns="http://www.w3.org/2000/svg"
+                             role="img"
+                             aria-label="Placeholder: 32x32"
+                             preserveAspectRatio="xMidYMid slice"
+                             focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="@package.Color" />
+                            <text x="50%" y="50%" fill="@package.Color" dy=".3em">32x32</text>
+                        </svg>
+                        @package.PackageName
+                        <span class="badge bg-secondary">@package.LastVersion</span>
+                        <span class="badge bg-secondary">Stable: @package.StableVersion</span>
+                    </h6>
+                    @if (package.HaveMismatch)
+                    {
+                        <span class="badge bg-warning">mismatch found</span>
+                    }
+                    @foreach (var info in package.FilesByPackage)
+                    {
+                        <div class="d-flex text-muted pt-3">
+                            <p class="mb-0 small lh-sm">
+                                @if (info.Updated)
+                                {
+                                    <span class="badge bg-success">@info.InstalledVersion</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-danger">@info.InstalledVersion</span>
+                                }
+                                <span>at @info.Path</span>
+                            </p>
+                        </div>
+                    }
+                </div>
+            }
+        }
+    </div>
+    <div class="col-md-3">
+        <canvas id="myChart"
+                style="width: 100%; max-width: 200px"
+                data-updated="@Model.CountUpdated"
+                data-not-updated="@Model.CountNotUpdated"></canvas>
+    </div>
+</div>

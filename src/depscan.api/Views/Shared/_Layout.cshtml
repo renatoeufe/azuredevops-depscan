@@ -1,0 +1,55 @@
+﻿@{
+    var title = ViewBag.Title ?? "Dependency Scan";
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Pottencial">
+    <title>@title</title>
+    <environment include="Development">
+        <link rel="stylesheet" href="~/bootstrap/css/bootstrap.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="~/bootstrap/css/bootstrap.min.css" />
+    </environment>
+    <meta name="theme-color" content="#7952b3">
+    <link href="~/app/index.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Dependency Scan</a>
+            <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="nav-scroller bg-body shadow-sm">
+        <nav class="nav nav-underline" aria-label="Secondary navigation">
+            <a class="nav-link active" aria-current="page" href="#">Explore</a>
+        </nav>
+    </div>
+
+    <main class="container">
+        @RenderBody()
+    </main>
+
+    <environment include="Development">
+        <script src="~/bootstrap/js/bootstrap.js"></script>
+        <script src="~/Chart.js/chart.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="~/bootstrap/js/bootstrap.min.js"></script>
+        <script src="~/Chart.js/chart.min.js"></script>
+    </environment>
+
+    <script src="~/app/app.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

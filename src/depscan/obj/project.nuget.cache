@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "Pfy/FQzHF0xXYoQibt4o6TtkIytSSubFUSPgeneHaTu5xCmQ2UVbcXqYv2KYQKRjmIW87+ugq2J1SvyrQ9hxnA==",
+  "success": true,
+  "projectFilePath": "S:\\repos\\github\\azuredevops-depscan\\src\\depscan\\depscan.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\renat\\.nuget\\packages\\refit\\6.3.2\\refit.6.3.2.nupkg.sha512",
+    "C:\\Users\\renat\\.nuget\\packages\\system.commandline\\2.0.0-beta2.21617.1\\system.commandline.2.0.0-beta2.21617.1.nupkg.sha512",
+    "C:\\Users\\renat\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\renat\\.nuget\\packages\\system.net.http.json\\6.0.0\\system.net.http.json.6.0.0.nupkg.sha512",
+    "C:\\Users\\renat\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\renat\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\renat\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
