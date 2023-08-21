@@ -18,13 +18,14 @@ NuGetOutdatedScanner is a command-line interface (CLI) tool built with .NET Core
 1. Clone the repository.
 
 ```bash
-git clone https://github.com/your-username/NuGetOutdatedScanner.git
+git clone https://github.com/renatoeufe/azuredevops-depscan.git
 ```
 
 2. Navigate to the project folder.
 
 ```bash
-cd NuGetOutdatedScanner
+cd azuredevops-depscan
+cd src
 ```
 Build the project.
 ```bash
